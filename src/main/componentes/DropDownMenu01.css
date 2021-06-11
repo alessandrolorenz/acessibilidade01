@@ -1,0 +1,44 @@
+nav {
+  position: relative;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: darkslategray;
+}
+
+.dropdown__options {
+  top: 0;
+  width: 10%;
+  position: absolute;
+  background: white;
+}
+
+.dropdown__options a {
+  font-weight: 400;
+}
+
+.dropdown__button {
+  background: none;
+  font-weight: 400;
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}

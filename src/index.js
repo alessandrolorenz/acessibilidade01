@@ -2,12 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Sobre from './main/paginas/Sobre';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+
+if (process.env.NODE_ENV !== 'production') {
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+  <Switch>
+    <Route path="/" exact={true} component={App} />
+    <Route path="/sobre" exact={true} component={Sobre} />
+    <Route path='*' component={App} />
+  </Switch>
+    
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

@@ -1,0 +1,37 @@
+.formulario01 {
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+  justify-self: center;
+  background-color: #202c46;
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  .botao01 {
+    width: 80%;
+    align-self: center;
+  }
+  .inputText {
+    width: 80%;
+    align-self: center;
+  }
+  
+  .labelImputText {
+    color: #f4f4f4;
+    
+  }
+  
+  
+}
+
+.textoAgradecimento{
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}

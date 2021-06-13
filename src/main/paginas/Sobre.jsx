@@ -27,9 +27,11 @@ class Sobre extends Component {
         </Link>
        </header>
        <p className="App-intro" tabIndex="0">
-            Exemplo de Página Sobre
+            Esta pagina contém um botao com um sub menu. Ele desaparece com o evento de controlar a navegaçao pelo tab.
+Ainda falta colocar ARIA stuf.
+
        </p>
-       <DropDownMenu01/>
+       <DropDownMenu01 className="dropdown-menu/>
     </div>
  );
  }

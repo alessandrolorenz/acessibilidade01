@@ -17,7 +17,7 @@ function Form01() {
 
   useEffect(() => {
     if(agradecimento && agradecimento.current) {
-      agradecimento.current.focus() // SPA nao carrega
+      agradecimento.current.focus()
     }
   })
 

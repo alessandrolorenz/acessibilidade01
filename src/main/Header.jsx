@@ -10,9 +10,7 @@ export default class Header extends React.Component{
     }
     this.tituloDaPagina = React.createRef()
     this.timeOutId = null;
-
   }
-
 
   componentDidMount() {
     this.tituloDaPagina.current.focus()

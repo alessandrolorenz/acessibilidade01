@@ -27,11 +27,17 @@ class Sobre extends Component {
         </Link>
        </header>
        <p className="App-intro" tabIndex="0">
-            Esta pagina contém um botao com um sub menu. Ele desaparece com o evento de controlar a navegaçao pelo tab.
-Ainda falta colocar ARIA stuf.
+            Referencias para o desenvolvimento do projeto: <br/>
+            https://egghead.io/courses/develop-accessible-web-apps-with-react<br/>
+            Rocketseat: https://www.youtube.com/watch?v=-j7vLmBMsEU<br/>
+            React; https://pt-br.reactjs.org/docs/accessibility.html
+
+          <br/>
+          PROJETO INACABADO 
+          Estasendo feito em horários livres (e energia :D )
 
        </p>
-       <DropDownMenu01 className="dropdown-menu/>
+       <DropDownMenu01/>
     </div>
  );
  }

@@ -20,8 +20,9 @@ export default class Formulário extends Component {
     return (
       <form>
         <div className="form-group">
-          <label>Usename</label>
+          <label htmlFor="username-input">Usename</label>
           <input 
+            id="username-input"
             type="text" 
             name="usename"
             className="usernameClasses"
@@ -32,14 +33,18 @@ export default class Formulário extends Component {
         </div>
 
         <div className="form-group">
-          <label>Password</label>
+          <label htmlFor="password-input">Password</label>
           <input 
+            id="password-input"
             type="password" 
             name="password"
             className="passwordClasses"
             onChange={this.handlePasswordChanche} />
-          <div className="invalid-feedback">
+            <small className="form-text text-muted">
             A senha diferencia maiúsculas de minúsculas
+            </small>
+          <div className="invalid-feedback">
+            Senha inválida
           </div>
         </div>
       </form>

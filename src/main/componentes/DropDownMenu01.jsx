@@ -48,7 +48,7 @@ export default class DropDownMenu01 extends Component {
         </button>
         {this.state.isOpen && (
           <ul className="dropdown__options">
-            <li><Link to="/login">Login</Link></li>
+            <li className="sub_menu" ><Link to="/login">Login</Link></li>
             <li><Link to="/shop">Shop</Link></li>
           </ul>
         )}

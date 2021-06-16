@@ -3,8 +3,8 @@ import './Header.css';
 import {Link} from 'react-router-dom'
 
 export default class Header extends React.Component{
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       isOpen: false
     }
@@ -19,15 +19,13 @@ export default class Header extends React.Component{
 render() {      
     return (
       <header className="App-header">
-  
-    <h1 className="titulo" ref={this.tituloDaPagina} tabIndex="0">Meu site acessivel</h1>
-   
-      <Link 
-        className="App-link"
-        to="/sobre"
-      >
-        Mais sobre este projeto
-      </Link>
+        <h1 className="titulo" ref={this.tituloDaPagina} tabIndex="0">{this.props.titulo}</h1>
+        <Link 
+          className="App-link"
+          to={this.props.caminho}
+        >
+          {this.props.tituloBotao}
+        </Link>
     </header>
     )
   }

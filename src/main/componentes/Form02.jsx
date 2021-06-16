@@ -45,7 +45,6 @@ export default class Formulário extends Component {
   onSubmit() {
     const { history } = this.props
     const isFormValid = this.validateForm()
-    console.log(isFormValid);
     if(isFormValid) {
       history.push('/sobre')
     }
@@ -54,6 +53,7 @@ export default class Formulário extends Component {
   
   render() {
     const {isPasswordValid, isUsernameValid} = this.state
+    console.log(isPasswordValid, isUsernameValid);
     return (
       <div className="login row align-items-center">
         <div className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
@@ -80,7 +80,8 @@ export default class Formulário extends Component {
               label="Senha"
               isValid={isPasswordValid}
               onChange={this.handlePasswordChange}
-              errorText="Insira um nome"
+              errorText="Insira um password"
+              helperText="Senhas distinguem entre maiúsculas e minúsculas"
               isRequired
               />
             </fieldset>
@@ -88,8 +89,6 @@ export default class Formulário extends Component {
           <button type="button" className="btn btn-dark" onClick={this.onSubmit}>Entrar</button>  
             
           </form>
-
-
           </div>
         </div>
       </main>

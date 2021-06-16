@@ -6,15 +6,16 @@ function FormInput({
   type,
   name,
   label,
-  helperText,
   errorText,
+  helperText,
   onChange,
   isRequired,
   isValid
 }) {
-  const inputClasses = `form-control ${!isValid ? 'is-valid' : '' }`
+  const inputClasses = `form-control ${!isValid ? 'is-invalid' : ''}`;
   const helperId = helperText ? `${id}-helper` : ''
   const errorId = errorText && !isValid ? `${id}-error` : ''
+
 
   return (
     <div className="form-group">
@@ -30,13 +31,13 @@ function FormInput({
         aria-describedby={`${helperId} ${errorId}`}
       />
       { helperText &&
-          <smal id={helperId} className="form-text helper-text">
+          <small id={helperId} className="form-text helper-text">
             {helperText}
-          </smal>
+          </small>
       }
       { errorText &&
-        <div id={errorId} className="invalid-feedback" aria-live="polite">
-          {errorText}
+          <div id={errorId} className="invalid-feedback" aria-live="polite">
+              {errorText}
           </div>
       }
       

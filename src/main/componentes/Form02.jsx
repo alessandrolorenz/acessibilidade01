@@ -8,7 +8,7 @@ export default class Formulário extends Component {
       field:''
     }
     this.handleUsenameChanche = (e) => {
-      console.log(e);
+      console.log(e.target.value);
     }
     this.handlePasswordChanche = (e) => {
       console.log(e);

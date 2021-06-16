@@ -1,53 +1,102 @@
 import React, { Component } from 'react'
+import FormInput from '../primitives/FormInput'
 
 export default class Formulário extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      field:''
+      username: '',
+      password: '',
+      isUsernameValid: true,
+      isPasswordValid: true
     }
-    this.handleUsenameChanche = (e) => {
-      console.log(e.target.value);
-    }
-    this.handlePasswordChanche = (e) => {
-      console.log(e);
-    }
+
+    this.handleUsenameChange = this.handleUsenameChange.bind(this)
+    this.handlePasswordChange = this.handlePasswordChange.bind(this)
+    this.validateForm = this.validateForm.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
   
+
+  handleUsenameChange = (e) => {
+    this.setState({
+      username: e.target.value
+    })
+  }
+  handlePasswordChange = (e) => {
+    this.setState({
+      password: e.target.value
+    })
+  }
+
+  validateForm() {
+    const { username, password } = this.state
+    const isUsernameValid = !!username
+    const isPasswordValid = !!password
+    this.setState({
+      isUsernameValid,
+      isPasswordValid
+    })
+    return isUsernameValid && isPasswordValid
+  }
+  
+
+  onSubmit() {
+    const { history } = this.props
+    const isFormValid = this.validateForm()
+    console.log(isFormValid);
+    if(isFormValid) {
+      history.push('/sobre')
+    }
+
+  }
   
   render() {
+    const {isPasswordValid, isUsernameValid} = this.state
     return (
-      <form>
-        <div className="form-group">
-          <label htmlFor="username-input">Usename</label>
-          <input 
-            id="username-input"
-            type="text" 
-            name="usename"
-            className="usernameClasses"
-            onChange={this.handleUsenameChanche} />
-          <div className="invalid-feedback">
-            Por favor preencha o nome
+      <div className="login row align-items-center">
+        <div className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
+      <main>
+        <div className="card bg-light">
+          <h2 className="card-header">Login</h2>
+          <div className="card-body">        
+          <form>
+            <fieldset>
+              <FormInput
+              id="field-username"
+              type="text"
+              name="username"
+              label="Nome"
+              isValid={isUsernameValid}
+              onChange={this.handleUsenameChange}
+              errorText="Insira um nome"
+              isRequired
+              />
+              <FormInput
+              id="field-password"
+              type="password"
+              name="Password"
+              label="Senha"
+              isValid={isPasswordValid}
+              onChange={this.handlePasswordChange}
+              errorText="Insira um nome"
+              isRequired
+              />
+            </fieldset>
+
+          <button type="button" className="btn btn-dark" onClick={this.onSubmit}>Entrar</button>  
+            
+          </form>
+
+
           </div>
+        </div>
+      </main>
+
         </div>
 
-        <div className="form-group">
-          <label htmlFor="password-input">Password</label>
-          <input 
-            id="password-input"
-            type="password" 
-            name="password"
-            className="passwordClasses"
-            onChange={this.handlePasswordChanche} />
-            <small className="form-text text-muted">
-            A senha diferencia maiúsculas de minúsculas
-            </small>
-          <div className="invalid-feedback">
-            Senha inválida
-          </div>
-        </div>
-      </form>
-    )
+      </div>
+)
   }
 }

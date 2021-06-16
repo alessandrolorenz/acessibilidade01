@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 
 import './index.css';
 import App from './App';
-import Sobre from './main/paginas/Sobre';
-import Login from './main/paginas/Login'
+
 
 if (process.env.NODE_ENV !== 'production') {
   const axe = require('@axe-core/react');
@@ -15,13 +14,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 ReactDOM.render(
   <BrowserRouter>
-  <Switch>
-    <Route path="/" exact={true} component={App} />
-    <Route path="/sobre" exact={true} component={Sobre} />
-    <Route path="/login" exact={true} component={Login} />
-    <Route path='*' component={App} />
-  </Switch>
-    
+    <App/>
   </BrowserRouter>,
   document.getElementById('root')
 );

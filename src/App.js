@@ -1,16 +1,33 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+
 import './App.css';
 
-import Header from './main/Header'
-import Main from './main/Main'
+import Login from './main/paginas/Login'
+import Sobre from './main/paginas/Sobre';
+import Principal from './main/paginas/Principal'
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Main />
-      <footer>Footer</footer>
+      <Switch>
+        <Route path="/" exact={true} render={(props) => (
+          <Principal {...props} />
+        )} />
+        <Route path="/sobre" exact={true} render={(props) => (
+          <Sobre {...props} />
+        )}
+        />
+        <Route path="/login" exact={true} render={(props) => (
+          <Login {...props} />
+        )} />
+      </Switch>
+
+
+
+      {/* <Header />
+      <Main /> */}
     </>
   );
 }

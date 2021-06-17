@@ -9,12 +9,30 @@ function Main() {
   return (
     <main className="maincontent" >
     
-    <p className="box01" tabIndex="0">A acessibilidade da Web (também chamada de ** a11y **) é o design e a criação de sites que podem ser usados ​​por todos. O suporte à acessibilidade é necessário para permitir que tecnologias assistivas interpretem as páginas da web. React suporta totalmente a construção de sites acessíveis, muitas vezes usando técnicas HTML padrão.</p>
+    <p className="box01" tabIndex="0">A acessibilidade da Web (também chamada de ** a11y **) é o design e a criação de sites que podem ser usados ​​por todos. O suporte à acessibilidade é necessário para permitir que tecnologias assistivas interpretem as páginas da web. React suporta totalmente a construção de sites acessíveis, muitas vezes usando técnicas HTML padrão. <br/>
+    <small>Fonte: Documentação do React.</small><br/><br/>
+    Este é um site bem simples e por enquanto não tem backend ou chamadas ao servidor. A idéia é fazer ele navegável através do teclado (usando o a tecla de tab). Além disso quero fazê-la conforme algumas diretrizes de acessibilidade do WCAG.<br/><br/>
+    Primeiramente vou se concentrar nas funcionalidades para depois então me preocupar com o layout em um segundo momento. O código está disponível no Github e hospedado no Heroku.</p>
     <Like01 className="imagem"/>
-    <p className="box03" tabIndex="0">Este é um teste aplicando algumas praticas para exercitar desenvolver pensando em acessibilidade com o react</p>
-    <p className="box04" tabIndex="0">A idéia é tem uma boa navegação e inspecionando com o axe-core/react, um plugin para o Firefox que nos ajuda com questões de acessibilidade.</p>
+
+    <div className="lista">
+    <h3>Alguns desafios propostos são:</h3>
+    <lu className="box04" tabIndex="0">
+      <li>Tornar as páginas navegaveis pelo teclado.</li>
+      <li>inspecionar com o axe-core/react, Tota11y e WCAG color contrast checker.</li>
+      <li>Deixar o foco linear de forma que seja possível navegar sem se perder pelas páginas.</li>
+      <li>Fazer um formulário com foco na mensagem aós envio.</li>
+      <li>Fazer um formulário de login que apresente os erros de formulário (exemplo: campo não preenchido).</li>
+      <li>Fazer um dropdown menu em que seja fechado quando o foco estiver no próximo elemento da página. </li>
+      <li>Usar ARIA roles, states e properties.</li>
+      <li>Fazer o site em React.</li>
+      <li>Integrar ele com o Github e Heroku para fazer deploy.</li>
+
+    </lu>
+
+    </div>
     
-    <Form01/>
+    <Form01 className="formulario"/>
 
   </main>
   )

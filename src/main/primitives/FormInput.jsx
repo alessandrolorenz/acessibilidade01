@@ -16,7 +16,6 @@ function FormInput({
   const helperId = helperText ? `${id}-helper` : ''
   const errorId = errorText && !isValid ? `${id}-error` : ''
 
-
   return (
     <div className="form-group">
       <label htmlFor={id}>{label}</label>

@@ -46,14 +46,13 @@ export default class Formulário extends Component {
     const { history } = this.props
     const isFormValid = this.validateForm()
     if(isFormValid) {
-      history.push('/sobre')
+      history.push('/principal')
     }
 
   }
   
   render() {
     const {isPasswordValid, isUsernameValid} = this.state
-    console.log(isPasswordValid, isUsernameValid);
     return (
       <div className="login row align-items-center">
         <div className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">

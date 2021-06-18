@@ -13,21 +13,17 @@ function App() {
     <>
       <Switch>
         <Route path="/" exact={true} render={(props) => (
-          <Principal {...props} />
+          <Login {...props} />
         )} />
         <Route path="/sobre" exact={true} render={(props) => (
           <Sobre {...props} />
         )}
         />
-        <Route path="/login" exact={true} render={(props) => (
-          <Login {...props} />
+        <Route path="/principal" exact={true} render={(props) => (
+          <Principal {...props} />
         )} />
       </Switch>
 
-
-
-      {/* <Header />
-      <Main /> */}
     </>
   );
 }

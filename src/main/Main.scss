@@ -1,9 +1,16 @@
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  border:0
+  }
+
 .maincontent {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 2fr;
   justify-content: center;
-  font-size: calc(5px + 2vmin);
+  font-size: calc(10px + 2vmin);
   color: #202c46;
 
   @media(max-width: 1000px){
@@ -34,7 +41,11 @@
     }
   }
    
-  
+  li {
+    width: 90%;
+    
+  }
+
   .box04 {
     margin: 5%;
     justify-self: center;

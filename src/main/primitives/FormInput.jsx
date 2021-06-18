@@ -35,8 +35,11 @@ function FormInput({
           </small>
       }
       { errorText &&
-          <div id={errorId} className="invalid-feedback" aria-live="polite">
-              {errorText}
+          <div id={errorId} 
+          className="invalid-feedback" 
+          aria-live="polite"
+          >
+              {!isValid && errorText}
           </div>
       }
       

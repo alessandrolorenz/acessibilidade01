@@ -43,6 +43,5 @@
     "@axe-core/react": "^4.2.1",
     "eslint": "^7.28.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "node-sass": "^5.0.0"
   }
 }

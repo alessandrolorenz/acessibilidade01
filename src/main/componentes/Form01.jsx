@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './form01.scss'
+import './form01.css'
 
 
 function Form01() {

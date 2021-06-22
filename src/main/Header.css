@@ -11,8 +11,18 @@
 
 .titulo {
   font-size: 1.5em;
+  margin-left: 5%;
+  max-width: 300px;
+}
 
-  margin-left: 5%
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: darkslategray;
+
+  max-width: 300px;
+
 }
 
 .App-link {

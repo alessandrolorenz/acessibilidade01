@@ -11,7 +11,11 @@ export default class Principal extends Component {
   render() {
     return (
       <>
-        <Header titulo="Meu site acessivel" caminho="/sobre" tituloBotao="Mais sobre este projeto"/>
+        <Header 
+          titulo="Simples site acessível" 
+          caminho="/" 
+          tituloBotao="Voltar para página anterior"
+        />
         <Main />
       </>
     )

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 import {Link} from 'react-router-dom'
 
 import './DropDownMenu01.css'
@@ -10,6 +10,8 @@ export default class DropDownMenu01 extends Component {
       isOpen: false
     }
     this.timeOutId = null;
+
+    this.refs = createRef()
   }
 
   onBlurHandler = () => {
@@ -30,6 +32,16 @@ export default class DropDownMenu01 extends Component {
     }));
   }
 
+  handleKeyDown(e) {
+    console.log(e.keyCode);
+    // 37 esq, 38 cima, 39 dir, 40 baixo (keyCodes)
+    // Como fazer para selecionar (ou colocar o foco) no proximo elemento da lista <li>?
+    // 1. Usar o estado?
+    // 2. Controlar o item da lista pelo index (i)?
+    
+
+  }
+
   render() {
     return (
       <nav>
@@ -42,19 +54,20 @@ export default class DropDownMenu01 extends Component {
           className="dropdown__button"
           aria-haspopup="true"
           aria-expanded={this.state.isOpen}
+          onKeyDown={ this.handleKeyDown } 
         >
           {this.props.title}
           <i className="arrow down"></i>
         </button>
         {this.state.isOpen && (
-          <ul className="dropdown__options" role="tab" aria-label="lista de links">
+          <ul className="dropdown__options" aria-label="lista de links">
             { this.props.links.map((link, i) => {
               return <li className="list__item" >
-                <Link role="tabpanel" key={i} tabIndex="0" to={link.path}>{link.label}</Link>
+                <Link key={i} tabIndex="0" to={link.path}>{link.label}</Link>
               </li>
             })}
           </ul>
-          // O atributo global tabindex indica se um elemento pode receber foco de entrada (se ele é focável), se e em qual posição ele deve fazer parte da navegação sequencial do teclado (geralmente com a tecla Tab, daí seu nome). https://developer.mozilla.org
+          // O atributo global tabindex indica se um elemento pode receber foco de entrada (se ele é focável) https://developer.mozilla.org
         )}
       </div>
     </nav>

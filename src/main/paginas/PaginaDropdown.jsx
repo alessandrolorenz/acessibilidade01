@@ -4,8 +4,15 @@ import './PaginaDropdown.css'
 import DropDownMenu01 from '../componentes/DropDownMenu01';
 import Header from '../Header'
 
+// import ListExample from '../componentes/ListExample';
+
 
 class Sobre extends Component {
+
+  handleKeyDown(e) {
+    console.log(e.keyCode);
+
+  }
   
   render() {
    const linksNemu1 = [
@@ -29,19 +36,30 @@ class Sobre extends Component {
       <main>
         <div className="main__content">
           <h2>Conteúdo Lorem 50</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae culpa nobis sunt optio sit quas ut aliquam labore laboriosam corrupti excepturi aut quaerat totam placeat nemo modi provident quia vitae magnam explicabo tempora saepe, debitis maiores dolor? Libero, modi distinctio? Beatae nesciunt sit voluptate temporibus optio consequatur officia possimus architecto?</p>
-
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam culpa totam adipisci dignissimos expedita nesciunt praesentium illum assumenda harum voluptatibus magni dolores sit, asperiores saepe ducimus? Blanditiis ut voluptatum ratione excepturi consectetur quisquam nisi cum ipsa sint ex sed tempora maxime quis placeat ab itaque minima ipsam impedit quam unde enim labore porro, nobis dolorem? Eaque, voluptatem excepturi maiores tempore nostrum, quasi deserunt laudantium molestias voluptate fuga vero rerum! Incidunt excepturi cum corrupti molestias accusantium voluptatibus omnis tempore architecto voluptatum?</p>
+          <p>Estas páginas representam alguns desafios sendo alguns deles:<br/>
+              Usar HTML semântico;
+              Tornar as páginas navegaveis pelo teclado;
+              inspecionar com o axe-core/react, Tota11y e WCAG color contrast checker;
+              Deixar o foco linear de forma que seja possível navegar sem se perder pelas páginas.
+              Fazer um formulário com foco na mensagem de resposta do envio;
+              Fazer um formulário de login que apresente os erros de formulário (exemplo: campo não preenchido);
+              Fazer um dropdown menu em que seja fechado quando o foco estiver no próximo elemento da página;
+              Usar ARIA roles, states e properties;
+              Fazer o site em React;
+              Integrar ele com o Github e Heroku para fazer deploy;
+              E TODOS OS DESAFIOS DE TENTAR MELHORAR E APRENDER.</p>
         </div>
       </main>
 
+  {/* <ListExample/> */}
 
       <footer className="footer">
        <p className="App-intro" tabIndex="0">
             Referencias para o desenvolvimento do projeto: <br/>
             https://egghead.io/courses/develop-accessible-web-apps-with-react<br/>
             Rocketseat: https://www.youtube.com/watch?v=-j7vLmBMsEU<br/>
-            React; https://pt-br.reactjs.org/docs/accessibility.html
+            React; https://pt-br.reactjs.org/docs/accessibility.html<br/>
+            https://www.youtube.com/watch?v=pOmdL9LzDJg
 
        </p>
       </footer>
@@ -49,5 +67,7 @@ class Sobre extends Component {
     </div>
  );
  }
-}export default Sobre;
+}
+
+export default Sobre;
 

@@ -13,10 +13,10 @@ function Main() {
     <small>Fonte: Documentação do React.</small><br/><br/>
     Este é um site bem simples e por enquanto não tem backend ou chamadas ao servidor. A idéia é fazer ele navegável pelo teclado (usando o a tecla de tab) e cobrir algumas diretrizes de acessibilidade do WCAG.<br/><br/>
     Primeiramente haverá concentração nas funcionalidades para depois então me preocupar com o layout em um segundo momento. O código está disponível no Github e hospedado no Heroku.</p>
-    <Like01 className="imagem"/>
+    {/* <Like01 className="imagem"/> */}
     </session>
 
-    <section className="lista">
+    {/* <section className="lista">
     <h2>Alguns desafios propostos são:</h2>
     <lu className="box04" tabIndex="0">
       <li>Usar HTML semântico</li>
@@ -30,7 +30,7 @@ function Main() {
       <li>Fazer o site em React.</li>
       <li>Integrar ele com o Github e Heroku para fazer deploy.</li>
     </lu>
-    </section>
+    </section> */}
 
     <Form01/>
 

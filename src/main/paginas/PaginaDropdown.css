@@ -1,0 +1,16 @@
+
+.main__content {
+  /* height: 70vh; */
+  margin: 30px;
+
+  font-size: 18px;
+}
+
+
+footer {
+  position: absolute;
+
+  bottom: 10px;
+  left: 30%;
+  right: 30%;
+}

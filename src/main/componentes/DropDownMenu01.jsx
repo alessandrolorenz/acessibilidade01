@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 import './DropDownMenu01.css'
 
 export default class DropDownMenu01 extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       isOpen: false
     }
@@ -43,14 +43,18 @@ export default class DropDownMenu01 extends Component {
           aria-haspopup="true"
           aria-expanded={this.state.isOpen}
         >
-          Browse
+          {this.props.title}
           <i className="arrow down"></i>
         </button>
         {this.state.isOpen && (
-          <ul className="dropdown__options">
-            <li className="sub_menu" ><Link to="/login">Login</Link></li>
-            <li><Link to="/shop">Shop</Link></li>
+          <ul className="dropdown__options" role="tab" aria-label="lista de links">
+            { this.props.links.map((link, i) => {
+              return <li className="list__item" >
+                <Link role="tabpanel" key={i} tabIndex="0" to={link.path}>{link.label}</Link>
+              </li>
+            })}
           </ul>
+          // O atributo global tabindex indica se um elemento pode receber foco de entrada (se ele é focável), se e em qual posição ele deve fazer parte da navegação sequencial do teclado (geralmente com a tecla Tab, daí seu nome). https://developer.mozilla.org
         )}
       </div>
     </nav>

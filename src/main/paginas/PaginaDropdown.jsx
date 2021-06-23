@@ -4,25 +4,17 @@ import './PaginaDropdown.css'
 import DropDownMenu01 from '../componentes/DropDownMenu01';
 import Header from '../Header'
 
-// import ListExample from '../componentes/ListExample';
-
-
 class Sobre extends Component {
-
-  handleKeyDown(e) {
-    console.log(e.keyCode);
-
-  }
   
   render() {
    const linksNemu1 = [
-     {label: "Link 01", path: "/link1" },
-     {label: "Link 02", path: "/link2" },
+     {label: "Link_01", path: "/link1" },
+     {label: "Link_02", path: "/link2" },
     ]
    const linksNemu2 = [
-     {label: "Link 03" , path: "/link3" },
-     {label: "Link 04", path: "/link4" },
-     {label: "Link 05", path: "/link5" },
+     {label: "Link_03" , path: "/link3" },
+     {label: "Link_04", path: "/link4" },
+     {label: "Link_05", path: "/link5" },
     ]
 
 
@@ -30,8 +22,8 @@ class Sobre extends Component {
  return (
     <div className="App">
       <Header  titulo="Página inicial" caminho="/pagina" tituloBotao="Navegação para outra página">
-      <DropDownMenu01 title="Dropdown menu 1" links={linksNemu1}/>
-      <DropDownMenu01 title="Dropdown menu 2"  links={linksNemu2}/>
+      <DropDownMenu01 title="Primeiro Menu" links={linksNemu1}/>
+      <DropDownMenu01 title="Segundo Menu"  links={linksNemu2}/>
       </Header>
       <main>
         <div className="main__content">
@@ -50,8 +42,6 @@ class Sobre extends Component {
               E TODOS OS DESAFIOS DE TENTAR MELHORAR E APRENDER.</p>
         </div>
       </main>
-
-  {/* <ListExample/> */}
 
       <footer className="footer">
        <p className="App-intro" tabIndex="0">

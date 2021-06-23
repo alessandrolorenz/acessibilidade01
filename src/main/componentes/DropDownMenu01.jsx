@@ -63,7 +63,7 @@ export default class DropDownMenu01 extends Component {
           <ul className="dropdown__options" aria-label="lista de links">
             { this.props.links.map((link, i) => {
               return <li className="list__item" >
-                <Link key={i} tabIndex="0" to={link.path}>{link.label}</Link>
+                <Link key={link.label} tabIndex="0" to={link.path}>{link.label}</Link>
               </li>
             })}
           </ul>

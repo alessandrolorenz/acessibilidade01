@@ -1,7 +1,7 @@
 import React from 'react'
 import './Main.css'
 
-import Form01 from './componentes/Form01'
+import Form01 from '../componentes/Form01'
 
 function Main() {
 

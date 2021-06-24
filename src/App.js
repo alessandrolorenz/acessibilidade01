@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import './App.css';
+import Login from './main/paginas/Login';
 
 import PaginaDropdown from './main/paginas/PaginaDropdown';
 import Principal from './main/paginas/Principal'
@@ -18,6 +19,10 @@ function App() {
         <Route path="/pagina" exact={true} render={(props) => (
           <PaginaDropdown {...props} />
         )} />
+        <Route path="/login" exact={true} render={(props) => (
+          <Login {...props} />
+        )} />
+
       </Switch>
     </>
   );

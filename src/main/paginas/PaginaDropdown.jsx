@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './PaginaDropdown.css'
 import DropDownMenu01 from '../componentes/DropDownMenu01';
-import Header from '../Header'
+import Header from '../componentes/Header'
 
 class Sobre extends Component {
   
@@ -21,7 +21,7 @@ class Sobre extends Component {
 
  return (
     <div className="App">
-      <Header  titulo="Página inicial" caminho="/pagina" tituloBotao="Navegação para outra página">
+      <Header  titulo="Página inicial" caminho="/login" tituloBotao="Navegação para outra página">
       <DropDownMenu01 title="Primeiro Menu" links={linksNemu1}/>
       <DropDownMenu01 title="Segundo Menu"  links={linksNemu2}/>
       </Header>

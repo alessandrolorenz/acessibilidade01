@@ -26,9 +26,9 @@ function Form01() {
   return (
      submited ? <p className="textoAgradecimento" ref={agradecimento} tabIndex="0">"Obrigado"</p> :
     <form id="formulario01" className="formulario01" onSubmit={handleSubmit} >
-      <label className="labelImputText" htmlFor="inputText">Submeta o formulário</label>
+      <label className="labelImputText" htmlFor="inputText">Enviar formulário</label>
       <input className="inputText" id="inputText" onChange={event => setField(event.target.value)} type="text"></input>
-      <button className="botao01" type="submit">Submit</button>
+      <button className="botao01" type="submit">Enviar</button>
     </form>
   
   )

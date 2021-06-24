@@ -12,11 +12,11 @@ function App() {
     <>
       <Switch>
         <Route path="/" exact={true} render={(props) => (
-          <PaginaDropdown {...props} />
+          <Principal  {...props} />
         )}
         />
         <Route path="/pagina" exact={true} render={(props) => (
-          <Principal {...props} />
+          <PaginaDropdown {...props} />
         )} />
       </Switch>
     </>

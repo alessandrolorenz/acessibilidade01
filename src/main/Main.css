@@ -22,10 +22,12 @@
   }
 }
 
-.box01 {
-  justify-self: center;
-  align-self: center;
+header + main {
   margin: 5%; 
+}
+
+.texto {
+margin: 0 0 80px 0;
 }
 
 .lista {

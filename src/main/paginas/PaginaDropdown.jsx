@@ -29,8 +29,8 @@ class PaginaDropdownMenu extends Component {
         <main>
           <div className="main__content">
             <h2>Dropdown menus selecionaveis pela tecla TAB</h2>
-            <p>
-              Nos dois dropdownd menus do header foram usadas funçoes para as
+            <p tabIndex="0">
+              Nos dois dropdown menus do header foram usadas funçoes para as
               propriedades onBlur (onBlur=this.onBlurHandler) e onFocus
               (onFocus=this.onFocusHandler) para o tratamento quando o TAB
               seleciona outro elemento fechando o dropdown menu.

@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import './App.css';
 
 import Login from './main/paginas/Login';
-import PaginaDropdown from './main/paginas/PaginaDropdown';
+import PaginaDropdownMenu from './main/paginas/PaginaDropdown';
 import Principal from './main/paginas/Principal'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         )}
         />
         <Route path="/pagina" exact={true} render={(props) => (
-          <PaginaDropdown {...props} />
+          <PaginaDropdownMenu {...props} />
         )} />
         <Route path="/principal" exact={true} render={(props) => (
           <Principal {...props} />

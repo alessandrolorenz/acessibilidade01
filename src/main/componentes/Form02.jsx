@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import FormInput from "./primitives/FormInput";
 
+import '../../styles/Form02.css'
+
+
 export default class Formulário extends Component {
   constructor(props) {
     super(props);
@@ -50,8 +53,8 @@ export default class Formulário extends Component {
   render() {
     const { isPasswordValid, isUsernameValid } = this.state;
     return (
-      <div className="login row align-items-center meulogin">
-        <div className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
+      <div className="login">
+        <div className="col-12 col-md-12 col-xl-12">
           <main>
             <div className="card bg-light">
               <h2 className="card-header">Login</h2>

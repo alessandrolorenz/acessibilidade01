@@ -23,6 +23,7 @@ render() {
         <h1 className="titulo" ref={this.tituloDaPagina} tabIndex="0">{this.props.titulo}</h1>
         {this.children}
         <Link 
+          tabIndex="0"
           className="App-link"
           to={this.props.caminho}
         >

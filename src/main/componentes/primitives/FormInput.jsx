@@ -17,7 +17,7 @@ function FormInput({
   const errorId = errorText && !isValid ? `${id}-error` : ''
 
   return (
-    <div className="form-group"  aria-live="polite" >
+    <div className="form-group" >
       <label htmlFor={id}>{label}</label>
       <input 
         id={id}
@@ -37,7 +37,7 @@ function FormInput({
       { errorText &&
           <div id={errorId} 
           className="invalid-feedback" 
-          // aria-live="polite"
+          aria-live="polite"
           >
               {!isValid && errorText}
           </div>

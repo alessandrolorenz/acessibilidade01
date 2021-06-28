@@ -1,9 +1,9 @@
 * {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   vertical-align: baseline;
-  border:0
-  }
+  border: 0;
+}
 
 .maincontent {
   display: flex;
@@ -13,21 +13,20 @@
   font-size: calc(5px + 2vmin);
   color: #202c46;
   margin-bottom: 50px;
-  
 }
 
-@media(max-width: 1000px){
+@media (max-width: 1000px) {
   .maincontent {
     font-size: calc(10px + 2vmin);
   }
 }
 
 header + main {
-  margin: 5%; 
+  margin: 5%;
 }
 
 .texto {
-margin: 0 0 80px 0;
+  margin: 0 0 80px 0;
 }
 
 .lista {
@@ -41,13 +40,13 @@ svg {
   fill: #202c46;
 }
 
-@media(max-width: 1000px){
+@media (max-width: 1000px) {
   svg {
-    display: none
+    display: none;
   }
 }
-   
+
 li {
   width: 90%;
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }

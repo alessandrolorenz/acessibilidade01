@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import FormInput from "./primitives/FormInput";
+import FormInput from "../primitives/FormInput";
 
-import '../../styles/Form02.css'
+import '../../../styles/Form02.css'
 
 
 export default class Formulário extends Component {
@@ -25,6 +25,7 @@ export default class Formulário extends Component {
       username: e.target.value,
     });
   };
+  
   handlePasswordChange = (e) => {
     this.setState({
       password: e.target.value,
@@ -54,13 +55,13 @@ export default class Formulário extends Component {
     const { isPasswordValid, isUsernameValid } = this.state;
     return (
       <div className="login">
-        <div className="col-12 col-md-12 col-xl-12">
+        <div className="col-12">
           <main>
             <div className="card bg-light">
               <h2 className="card-header">Login</h2>
               <div className="card-body">
                 <form>
-                  <fieldset>
+                  <fieldset >
                     <FormInput
                       id="field-username"
                       type="text"

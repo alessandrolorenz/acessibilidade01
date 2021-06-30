@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import Header from '../componentes/Header'
-import Main from '../componentes/Main'
+import Header from '../componentes/header/Header'
+import Main from '../componentes/principal/Main'
 
 export default class Principal extends Component {
   constructor(props) {
@@ -13,8 +13,8 @@ export default class Principal extends Component {
       <>
         <Header 
           titulo="Simples site acessível" 
-          caminho="/pagina" 
           tituloBotao="Outra página"
+          caminho="/pagina" 
         />
         <Main />
       </>

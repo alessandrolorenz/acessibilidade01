@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
-import { Switch } from 'react-router-dom'
 
 import '../../styles/PaginaDropdown.css'
 import DropDownMenu01 from '../componentes/DropDownMenu01'
-import Header from '../componentes/Header'
+import Header from '../componentes/header/Header'
 
 class PaginaDropdownMenu extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     const linksNemu1 = [
       { label: 'Link_01', path: '/' },
@@ -39,7 +34,6 @@ class PaginaDropdownMenu extends Component {
             {...this.props}
           />
         </Header>
-
 
           <main>
             <div className="main__content">

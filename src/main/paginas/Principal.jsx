@@ -14,7 +14,7 @@ export default class Principal extends Component {
         <Header 
           titulo="Simples site acessível" 
           caminho="/pagina" 
-          tituloBotao="Próxima página"
+          tituloBotao="Outra página"
         />
         <Main />
       </>

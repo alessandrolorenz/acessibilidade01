@@ -42,9 +42,7 @@ export default class DropDownMenu01 extends Component {
   }
 
   onSubmit() {
-
     const { history } = this.props
-
     history.push('/principal')
   }
 
